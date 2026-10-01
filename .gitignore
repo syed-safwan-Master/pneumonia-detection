@@ -1,0 +1,23 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Dataset (large files)
+chest_xray/
+*.zip
+*.tar.gz
+
+# Runtime temporary uploads
+uploaded_image.jpg
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

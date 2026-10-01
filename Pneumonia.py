@@ -22,7 +22,7 @@ loss='categorical_crossentropy',
 optimizer='adam',
 metrics=['accuracy']
 )
-from keras.preprocessing.image import ImageDataGenerator
+from keras_preprocessing.image import ImageDataGenerator
 train_datagen = ImageDataGenerator(rescale = 1./255, #importing our dataset to keras using ImageDataGenerator in keras.
 								shear_range = 0.2,
 								zoom_range = 0.2,
@@ -36,7 +36,7 @@ test_set = testing_datagen.flow_from_directory('chest_xray/test',
 											target_size = (224, 224),
 											batch_size = 4,
 											class_mode = 'categorical')
-fitted_model = final_model.fit_generator( #Fitting the model.
+fitted_model = final_model.fit( #Fitting the model.
 training_set,
 validation_data=test_set,
 epochs=10,
